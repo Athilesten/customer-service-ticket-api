@@ -1,0 +1,6 @@
+Python 3.11.9
+Django 5.2.14
+Pydantic 2.13.4
+SQLite 3.45.1
+System check identified no issues (0 silenced).
+No changes detected

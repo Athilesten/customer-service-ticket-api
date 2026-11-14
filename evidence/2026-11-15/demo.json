@@ -1,0 +1,46 @@
+{
+  "walkthrough": {
+    "idempotent_replay": "same ticket",
+    "other_reporter_visibility": 404,
+    "stale_write": "version_conflict",
+    "urgent_resolution_due_at": "2026-11-14T13:00:00Z",
+    "first_response": "met",
+    "before_resolution": "breached",
+    "after_resolution": "missed",
+    "audit_actions": [
+      "created",
+      "assigned",
+      "reprioritized",
+      "status_changed",
+      "status_changed"
+    ],
+    "creation_request_id_matches_audit": true
+  },
+  "comparison": {
+    "tickets": 301,
+    "runs": 20,
+    "matching_counts": 8,
+    "counts": {
+      "total": 301,
+      "backlog": 250,
+      "unassigned": 200,
+      "urgent_backlog": 50,
+      "due_soon": 10,
+      "breached": 120,
+      "met": 27,
+      "missed": 24
+    },
+    "resolution_attainment_percent": 52.94,
+    "page_scan": {
+      "api_requests": 13,
+      "median_ms": 80.57,
+      "p95_ms": 144.08
+    },
+    "queue_metrics": {
+      "api_requests": 1,
+      "median_ms": 6.14,
+      "p95_ms": 10.09
+    },
+    "request_reduction_percent": 92.31
+  }
+}

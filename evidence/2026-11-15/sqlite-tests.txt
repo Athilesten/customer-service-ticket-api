@@ -1,0 +1,30 @@
+Found 16 test(s).
+Creating test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+
+Operations to perform:
+  Apply all migrations: tickets
+Running migrations:
+  Applying tickets.0001_initial... OK
+System check identified no issues (0 silenced).
+test_conflicts_and_invalid_assignees_do_not_increment_version (tests.test_api.TicketAPI.test_conflicts_and_invalid_assignees_do_not_increment_version) ... ok
+test_exact_deadline_is_due_soon_until_passed_and_completion_at_it_is_met (tests.test_api.TicketAPI.test_exact_deadline_is_due_soon_until_passed_and_completion_at_it_is_met) ... ok
+test_failed_audit_write_rolls_back_creation_and_update (tests.test_api.TicketAPI.test_failed_audit_write_rolls_back_creation_and_update) ... ok
+test_health_and_error_serialization (tests.test_api.TicketAPI.test_health_and_error_serialization) ... ok
+test_idempotency_normalizes_and_scopes_keys (tests.test_api.TicketAPI.test_idempotency_normalizes_and_scopes_keys) ... ok
+test_lifecycle_and_audit_correlation (tests.test_api.TicketAPI.test_lifecycle_and_audit_correlation) ... ok
+test_malformed_invalid_and_oversize_requests (tests.test_api.TicketAPI.test_malformed_invalid_and_oversize_requests) ... ok
+test_overdue_escalation_tightens_both_open_clocks (tests.test_api.TicketAPI.test_overdue_escalation_tightens_both_open_clocks) ... ok
+test_permissions_and_reporter_visibility (tests.test_api.TicketAPI.test_permissions_and_reporter_visibility) ... ok
+test_priority_tightens_clocks_and_retains_completed_response (tests.test_api.TicketAPI.test_priority_tightens_clocks_and_retains_completed_response) ... ok
+test_search_combines_filters_and_stably_pages_ties (tests.test_api.TicketAPI.test_search_combines_filters_and_stably_pages_ties) ... ok
+test_sla_filter_and_metrics_match_at_fixed_time (tests.test_api.TicketAPI.test_sla_filter_and_metrics_match_at_fixed_time) ... ok
+test_token_rotation_invalidates_old_token (tests.test_api.TicketAPI.test_token_rotation_invalidates_old_token) ... ok
+test_unassigned_queue_orders_by_deadline (tests.test_api.TicketAPI.test_unassigned_queue_orders_by_deadline) ... ok
+test_postgres_concurrent_edits_have_one_winner (tests.test_concurrency.ConcurrentWrites.test_postgres_concurrent_edits_have_one_winner) ... skipped 'Requires PostgreSQL row locks'
+test_postgres_concurrent_retries_create_one_ticket (tests.test_concurrency.ConcurrentWrites.test_postgres_concurrent_retries_create_one_ticket) ... skipped 'Requires PostgreSQL; SQLite in-memory test tables use shared-cache locks'
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.339s
+
+OK (skipped=2)
+Destroying test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...

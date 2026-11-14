@@ -1,0 +1,10 @@
+Operations to perform:
+  Apply all migrations: tickets
+Running migrations:
+  Applying tickets.0001_initial... OK
+GET /health/ready -> ready
+POST /api/v1/tickets -> 201
+POST /api/v1/tickets/{id}/assignment -> casey, version 2
+GET /api/v1/metrics/queue -> backlog 1
+GET /api/v1/tickets/{id}/audit -> 2 events
+Loopback HTTP smoke test passed.

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ticket Desk</title>
+  <link rel="stylesheet" href="/console/assets/console.css">
+  <script defer src="/console/assets/console.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="brand"><span aria-hidden="true">TD</span> Ticket Desk</div>
+      <span id="session-label">Connect to your queue</span>
+    </div>
+  </header>
+  <main>
+    <div class="page-heading">
+      <h1>Support queue</h1>
+      <button type="button" class="primary" id="new-ticket" disabled>+ New ticket</button>
+    </div>
+    <form id="connect">
+      <label>API bearer token <input type="password" name="token" required autocomplete="off"></label>
+      <button type="submit" class="primary">Connect</button>
+    </form>
+    <div id="demo-switch" hidden>
+      <label>Demo role
+        <select id="demo-role">
+          <option value="manager">Manager · Lead</option>
+          <option value="agent">Agent · Casey</option>
+          <option value="reporter">Reporter · Portal</option>
+        </select>
+      </label>
+    </div>
+    <p id="notice" role="status" aria-live="polite"></p>
+    <dl id="metrics" class="metrics" hidden></dl>
+    <div class="workspace">
+      <section class="panel">
+        <form id="filters">
+          <label>Search tickets <input type="search" name="q" maxlength="100" placeholder="Search title or description"></label>
+          <label>Status
+            <select name="status">
+              <option value="">All statuses</option>
+              <option value="open">Open</option>
+              <option value="in_progress">In progress</option>
+              <option value="resolved">Resolved</option>
+            </select>
+          </label>
+          <button type="submit">Search</button>
+        </form>
+        <div id="queue" class="queue"><p class="empty">Connect to load tickets.</p></div>
+        <nav class="pagination" aria-label="Queue pages" hidden>
+          <button type="button" id="previous">Previous</button>
+          <button type="button" id="next">Next</button>
+        </nav>
+      </section>
+      <section class="panel detail" aria-label="Ticket details" id="detail">
+        <p class="empty">Select a ticket to view its details.</p>
+      </section>
+    </div>
+  </main>
+  <dialog id="create-dialog">
+    <form id="create-ticket">
+      <h2>New ticket</h2>
+      <label>Title <input name="title" required minlength="5" maxlength="120"></label>
+      <label>Description <textarea name="description" required minlength="10" maxlength="5000" rows="4"></textarea></label>
+      <div class="dialog-actions">
+        <button type="button" id="cancel-create">Cancel</button>
+        <button type="submit" class="primary">Create ticket</button>
+      </div>
+      <p id="create-error" role="alert"></p>
+    </form>
+  </dialog>
+  <!-- DEMO ACTORS -->
+</body>
+</html>
